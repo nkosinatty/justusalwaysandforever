@@ -52,15 +52,15 @@ function LoginPage() {
             <div className="pointer-events-none absolute -top-3 left-1/2 -translate-x-1/2 rune-text text-xs text-ember flicker">
               ✦ Speak, friend ✦
             </div>
-            <h1 className="text-center font-display text-4xl text-ink">Just Us</h1>
+            <h1 className="text-center font-display text-4xl text-ink">WHAT ARE WE</h1>
             <p className="mt-2 text-center text-sm italic text-ink/70">
-              A private hall, sealed with a word only you know.
+              They say love found&nbsp; us but it was&nbsp;
             </p>
             <div className="mx-auto my-6 h-px w-32 bg-gradient-to-r from-transparent via-ink/40 to-transparent" />
 
             <form onSubmit={submit} className="space-y-4">
               <div>
-                <label className="rune-text mb-1 block text-[10px] text-ink/70">Name</label>
+                <label className="rune-text mb-1 block text-[10px] text-ink/70">USERNAME</label>
                 <input
                   autoFocus
                   value={u}
@@ -69,7 +69,7 @@ function LoginPage() {
                 />
               </div>
               <div>
-                <label className="rune-text mb-1 block text-[10px] text-ink/70">Secret</label>
+                <label className="rune-text mb-1 block text-[10px] text-ink/70">PASSWORD&nbsp;</label>
                 <input
                   type="password"
                   value={p}
