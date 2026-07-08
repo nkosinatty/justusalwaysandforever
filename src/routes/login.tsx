@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "@/lib/auth";
 import { Fireflies } from "@/components/Fireflies";
 import { Mist } from "@/components/Mist";
+import coupleBg from "@/assets/couple-bg.jpeg.asset.json";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
