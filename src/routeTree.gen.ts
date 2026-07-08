@@ -9,8 +9,68 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ReasonsRouteImport } from './routes/reasons'
+import { Route as PromiseRouteImport } from './routes/promise'
+import { Route as MusicRouteImport } from './routes/music'
+import { Route as MoonRouteImport } from './routes/moon'
+import { Route as MemoriesRouteImport } from './routes/memories'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as LettersRouteImport } from './routes/letters'
+import { Route as CountdownRouteImport } from './routes/countdown'
+import { Route as ConstellationRouteImport } from './routes/constellation'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ReasonsRoute = ReasonsRouteImport.update({
+  id: '/reasons',
+  path: '/reasons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromiseRoute = PromiseRouteImport.update({
+  id: '/promise',
+  path: '/promise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MusicRoute = MusicRouteImport.update({
+  id: '/music',
+  path: '/music',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoonRoute = MoonRouteImport.update({
+  id: '/moon',
+  path: '/moon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MemoriesRoute = MemoriesRouteImport.update({
+  id: '/memories',
+  path: '/memories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LettersRoute = LettersRouteImport.update({
+  id: '/letters',
+  path: '/letters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountdownRoute = CountdownRouteImport.update({
+  id: '/countdown',
+  path: '/countdown',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConstellationRoute = ConstellationRouteImport.update({
+  id: '/constellation',
+  path: '/constellation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +79,172 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/constellation': typeof ConstellationRoute
+  '/countdown': typeof CountdownRoute
+  '/letters': typeof LettersRoute
+  '/login': typeof LoginRoute
+  '/map': typeof MapRoute
+  '/memories': typeof MemoriesRoute
+  '/moon': typeof MoonRoute
+  '/music': typeof MusicRoute
+  '/promise': typeof PromiseRoute
+  '/reasons': typeof ReasonsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/constellation': typeof ConstellationRoute
+  '/countdown': typeof CountdownRoute
+  '/letters': typeof LettersRoute
+  '/login': typeof LoginRoute
+  '/map': typeof MapRoute
+  '/memories': typeof MemoriesRoute
+  '/moon': typeof MoonRoute
+  '/music': typeof MusicRoute
+  '/promise': typeof PromiseRoute
+  '/reasons': typeof ReasonsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/constellation': typeof ConstellationRoute
+  '/countdown': typeof CountdownRoute
+  '/letters': typeof LettersRoute
+  '/login': typeof LoginRoute
+  '/map': typeof MapRoute
+  '/memories': typeof MemoriesRoute
+  '/moon': typeof MoonRoute
+  '/music': typeof MusicRoute
+  '/promise': typeof PromiseRoute
+  '/reasons': typeof ReasonsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/constellation'
+    | '/countdown'
+    | '/letters'
+    | '/login'
+    | '/map'
+    | '/memories'
+    | '/moon'
+    | '/music'
+    | '/promise'
+    | '/reasons'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/constellation'
+    | '/countdown'
+    | '/letters'
+    | '/login'
+    | '/map'
+    | '/memories'
+    | '/moon'
+    | '/music'
+    | '/promise'
+    | '/reasons'
+  id:
+    | '__root__'
+    | '/'
+    | '/constellation'
+    | '/countdown'
+    | '/letters'
+    | '/login'
+    | '/map'
+    | '/memories'
+    | '/moon'
+    | '/music'
+    | '/promise'
+    | '/reasons'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConstellationRoute: typeof ConstellationRoute
+  CountdownRoute: typeof CountdownRoute
+  LettersRoute: typeof LettersRoute
+  LoginRoute: typeof LoginRoute
+  MapRoute: typeof MapRoute
+  MemoriesRoute: typeof MemoriesRoute
+  MoonRoute: typeof MoonRoute
+  MusicRoute: typeof MusicRoute
+  PromiseRoute: typeof PromiseRoute
+  ReasonsRoute: typeof ReasonsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/reasons': {
+      id: '/reasons'
+      path: '/reasons'
+      fullPath: '/reasons'
+      preLoaderRoute: typeof ReasonsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/promise': {
+      id: '/promise'
+      path: '/promise'
+      fullPath: '/promise'
+      preLoaderRoute: typeof PromiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/music': {
+      id: '/music'
+      path: '/music'
+      fullPath: '/music'
+      preLoaderRoute: typeof MusicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/moon': {
+      id: '/moon'
+      path: '/moon'
+      fullPath: '/moon'
+      preLoaderRoute: typeof MoonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/memories': {
+      id: '/memories'
+      path: '/memories'
+      fullPath: '/memories'
+      preLoaderRoute: typeof MemoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/letters': {
+      id: '/letters'
+      path: '/letters'
+      fullPath: '/letters'
+      preLoaderRoute: typeof LettersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/countdown': {
+      id: '/countdown'
+      path: '/countdown'
+      fullPath: '/countdown'
+      preLoaderRoute: typeof CountdownRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/constellation': {
+      id: '/constellation'
+      path: '/constellation'
+      fullPath: '/constellation'
+      preLoaderRoute: typeof ConstellationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +257,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConstellationRoute: ConstellationRoute,
+  CountdownRoute: CountdownRoute,
+  LettersRoute: LettersRoute,
+  LoginRoute: LoginRoute,
+  MapRoute: MapRoute,
+  MemoriesRoute: MemoriesRoute,
+  MoonRoute: MoonRoute,
+  MusicRoute: MusicRoute,
+  PromiseRoute: PromiseRoute,
+  ReasonsRoute: ReasonsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
