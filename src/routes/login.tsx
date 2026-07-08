@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "@/lib/auth";
 import { Fireflies } from "@/components/Fireflies";
 import { Mist } from "@/components/Mist";
+import coupleBg from "@/assets/couple-bg.jpeg.asset.json";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
@@ -33,6 +34,12 @@ function LoginPage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${coupleBg.url})` }}
+        aria-hidden
+      />
+      <div className="fixed inset-0 z-0 bg-night/75" aria-hidden />
       <Mist />
       <Fireflies count={25} />
       <div className="relative z-20 flex min-h-screen items-center justify-center px-4">

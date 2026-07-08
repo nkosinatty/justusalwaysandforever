@@ -1,5 +1,4 @@
-import { Link, useRouter } from "@tanstack/react-router";
-import { useAuth } from "@/lib/auth";
+import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
 const links = [
@@ -9,14 +8,10 @@ const links = [
   { to: "/music", label: "Music" },
   { to: "/map", label: "Map" },
   { to: "/constellation", label: "Stars" },
-  { to: "/reasons", label: "365" },
   { to: "/countdown", label: "Countdown" },
-  { to: "/promise", label: "Promise" },
 ] as const;
 
 export function PortalNav() {
-  const { logout } = useAuth();
-  const router = useRouter();
   return (
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
@@ -40,16 +35,8 @@ export function PortalNav() {
             </Link>
           ))}
         </div>
-        <button
-          onClick={() => {
-            logout();
-            router.navigate({ to: "/login" });
-          }}
-          className="rune-text text-[10px] text-mithril hover:text-ember transition-colors"
-        >
-          Depart
-        </button>
       </div>
     </motion.nav>
   );
 }
+

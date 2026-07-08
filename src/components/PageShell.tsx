@@ -7,6 +7,7 @@ import { AmbientAudio } from "./AmbientAudio";
 import { useAuth } from "@/lib/auth";
 import { useRouter } from "@tanstack/react-router";
 import { useEffect } from "react";
+import coupleBg from "@/assets/couple-bg.jpeg.asset.json";
 
 export function PageShell({ children, title, subtitle }: { children: ReactNode; title?: string; subtitle?: string }) {
   const { authed, hydrated } = useAuth();
@@ -22,6 +23,12 @@ export function PageShell({ children, title, subtitle }: { children: ReactNode; 
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${coupleBg.url})` }}
+        aria-hidden
+      />
+      <div className="fixed inset-0 z-0 bg-night/75" aria-hidden />
       <Mist />
       <Fireflies />
       <PortalNav />
