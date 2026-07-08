@@ -7,6 +7,7 @@ import { AmbientAudio } from "./AmbientAudio";
 import { useAuth } from "@/lib/auth";
 import { useRouter } from "@tanstack/react-router";
 import { useEffect } from "react";
+import coupleBg from "@/assets/couple-bg.jpeg.asset.json";
 
 export function PageShell({ children, title, subtitle }: { children: ReactNode; title?: string; subtitle?: string }) {
   const { authed, hydrated } = useAuth();
