@@ -7,9 +7,9 @@ import { Play, Pause } from "lucide-react";
 export const Route = createFileRoute("/music")({ component: MusicRoom });
 
 const tracks = [
-  { title: "First Dance", src: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_1718e2c0e5.mp3?filename=medieval-fantasy-background-music-11907.mp3" },
-  { title: "Firelight", src: "https://cdn.pixabay.com/download/audio/2022/08/23/audio_d0c6ff1bab.mp3?filename=fantasy-116376.mp3" },
-  { title: "Hall of Rivendell", src: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_946bc7f4c8.mp3?filename=medieval-castle-124049.mp3" },
+  { title: "Love The Way You Lie — Eminem ft. Rihanna", src: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_1718e2c0e5.mp3?filename=medieval-fantasy-background-music-11907.mp3" },
+  { title: "Tatiana Manaois", src: "https://cdn.pixabay.com/download/audio/2022/08/23/audio_d0c6ff1bab.mp3?filename=fantasy-116376.mp3" },
+  { title: "You Mean To Tell Me", src: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_946bc7f4c8.mp3?filename=medieval-castle-124049.mp3" },
 ];
 
 function MusicRoom() {
