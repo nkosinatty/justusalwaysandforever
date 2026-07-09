@@ -112,7 +112,7 @@ function Memories() {
                 <img
                   src={pages[i].image}
                   alt={pages[i].title}
-                  className="mb-4 max-h-96 w-full rounded border border-ink/20 object-cover shadow-lg"
+                  className="mb-4 max-h-[70vh] w-full rounded border border-ink/20 object-contain shadow-lg bg-night/20"
                 />
               )}
               <p className="hand-text text-ink/90 whitespace-pre-wrap">{pages[i]?.body}</p>
@@ -180,7 +180,7 @@ function Memories() {
                   <ImagePlus size={16} /> {image ? "Change image" : "Attach image"}
                 </button>
                 {image && (
-                  <img src={image} alt="preview" className="max-h-48 w-full rounded object-cover" />
+                  <img src={image} alt="preview" className="max-h-64 w-full rounded object-contain bg-night/20" />
                 )}
               </div>
               <div className="mt-5 flex justify-end gap-2">
