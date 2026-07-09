@@ -180,7 +180,7 @@ function Memories() {
                   <ImagePlus size={16} /> {image ? "Change image" : "Attach image"}
                 </button>
                 {image && (
-                  <img src={image} alt="preview" className="max-h-48 w-full rounded object-cover" />
+                  <img src={image} alt="preview" className="max-h-64 w-full rounded object-contain bg-night/20" />
                 )}
               </div>
               <div className="mt-5 flex justify-end gap-2">
