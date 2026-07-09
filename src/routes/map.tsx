@@ -6,12 +6,14 @@ import { useState } from "react";
 export const Route = createFileRoute("/map")({ component: MapRoute });
 
 const places = [
-  { x: 18, y: 30, name: "Where We Met", tale: "A crowded room and a first, foolish grin." },
-  { x: 42, y: 22, name: "The Long Walk", tale: "River path, cold hands, warmer words." },
-  { x: 62, y: 48, name: "The Kitchen of Songs", tale: "Kettle, humming, small dances." },
-  { x: 78, y: 68, name: "Our Hidden Wood", tale: "The bench that only we know about." },
-  { x: 30, y: 72, name: "The City of Lights", tale: "Rooftops, cheap wine, brave plans." },
-  { x: 88, y: 20, name: "Home", tale: "Wherever your shoes are by the door." },
+  { x: 10, y: 70, name: "The Sleepover", tale: "Where it all began — whispers past midnight." },
+  { x: 22, y: 42, name: "First Kiss", tale: "The world went quiet, and everything shifted." },
+  { x: 36, y: 62, name: "Movie Night", tale: "Half-watched screen, fully-held hand." },
+  { x: 50, y: 30, name: "Ice Cream Day", tale: "Sunlight, sweet cones, and your laugh." },
+  { x: 62, y: 58, name: "The Park", tale: "Long walks, longer talks, softer us." },
+  { x: 74, y: 34, name: "The Chinese Shop", tale: "Our little ritual — you always ordered the same." },
+  { x: 86, y: 60, name: "Go Cart", tale: "You won. I let you. (Mostly.)" },
+  { x: 94, y: 28, name: "And Now", tale: "Here. Still choosing you, every single day." },
 ];
 
 function MapRoute() {
